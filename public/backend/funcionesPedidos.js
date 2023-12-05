@@ -198,6 +198,8 @@ const actualizarPedido= () => {
 
 }
 
+
+
 const redireccionarEditar=(objetoPedidos) =>{
     document.location.href='/editarPedido?pedido='+objetoPedidos
     alert(objetoPedidos)  
@@ -222,21 +224,21 @@ function verificarEditar() {
     var pedido = urlParams.get('pedido');
     var idElement = document.getElementById('numPedido');
 
-        if (pedido) {
-        // Estás en la página de edición
-        idElement.disabled = true;
-        document.getElementById('btnRegistrar').style.display = 'block';
-        document.getElementById('btnLimpiar').style.display = 'block';
-        document.getElementById('btnCancelar').style.display = 'block';
-        } else {
-        // No estás en la página de edición
-        document.getElementById('btnLimpiar').style.display = 'none';
-        document.getElementById('btnCancelar').style.display = 'block';
-        document.getElementById('btnRegistrar').style.display = 'block';
+        // if (pedido) {
+        // // Estás en la página de edición
+        // idElement.disabled = true;
+        // document.getElementById('btnGuardarEditar').style.display = 'block';
+        // document.getElementById('btnCancelarEditar').style.display = 'block';
+        // } 
+        // if (!pedido) {
+        // // No estás en la página de edición
+        //  document.getElementById('btnCancelarEditar').style.display = 'block';
+        //  document.getElementById('btnGuardarEditar').style.display = 'block';
 
-        } 
+        //  } 
 }
 }
+
 editarPedido();
 
 

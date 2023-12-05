@@ -68,11 +68,11 @@
 
                       
         <div class="">
-          <a href="/pedidos"><button type="button" class="btn btn-light more">Cancelar</button> </a> 
+          <a href="/pedidos"><button type="button" class="btn btn-light more" id="btnCancelar">Cancelar</button> </a> 
        </div>
 
        <div class="">
-       <button type="submit" class="btn btn-light more2" id="btnGuardar">Guardar</button> 
+       <button type="submit" class="btn btn-light more2" id="btnActualizar">Guardar</button> 
      </div>
 
        
@@ -106,11 +106,11 @@
                             <label for="estado" class="form-label fontTtitle">Estado <span class="text-danger">*</span></label>
                             <select class="form-select selector" aria-label="Default select example" oninput="validarEstado()" id="estado">
                               <option selected></option>
-                              <option value="1">pendiente</option>
-                              <option value="2">revisión</option>
-                              <option value="3">aprobado</option>
-                              <option value="4">rechazado</option>
-                              <option value="5">cancelado</option>
+                              <option value="pendiente">pendiente</option>
+                              <option value="revisión">revisión</option>
+                              <option value="aprobado">aprobado</option>
+                              <option value="rechazado">rechazado</option>
+                              <option value="cancelado">cancelado</option>
                             </select>
                           </div>
 
@@ -140,11 +140,11 @@
                     <label for="formaPago" class="form-label fontTtitleAggPedido2">Forma Pago  <span class="text-danger">*</span></label>
                     <select class="form-select selectPagos" aria-label="Default select example" id="formaPago" >
                       <option selected></option>
-                      <option value="1">bancolombia</option>
-                      <option value="2">nequi</option>
-                      <option value="3">daviPlata</option>
-                      <option value="4">bbva</option>
-                      <option value="5">pse</option>
+                      <option value="bancolombia">bancolombia</option>
+                      <option value="nequi">nequi</option>
+                      <option value="daviPlata">daviPlata</option>
+                      <option value="bbva">bbva</option>
+                      <option value="pse">pse</option>
                     </select>
                  </div> 
 
