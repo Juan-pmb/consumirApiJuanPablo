@@ -1,0 +1,44 @@
+
+    
+    .tablaColoresContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      
+      .fila-color {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+     
+      
+      .eliminar-btn {
+        padding: 10px 10px;
+        background-color:  #1f2553;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        
+      }
+      .cuadro-color {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    .campo-insumo {
+      margin-bottom: 10px;
+    }
+    
+    .incompleto {
+      border: 1px solid red;
+    }
+    
+    .completo {
+      border: 1px solid green;
+    }

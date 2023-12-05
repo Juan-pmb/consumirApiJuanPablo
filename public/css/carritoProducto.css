@@ -1,0 +1,375 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: rgb(245, 245, 245);
+}
+
+.container { /* Contenedor Padre */
+  display: flex;
+  width: 750px;
+  height: 440px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  margin-top: 100px;
+  margin-left: 15%;
+  border-radius: 10px;
+  box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 90px;
+}
+
+
+.table-orientacion {
+  margin-top: 40px;  
+}
+
+.textoh1 { /* Título para el formulario */
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(31, 37, 83);
+  font-size: 25pt;
+  display: flex;
+  margin-bottom: 40px;
+  margin-top: -35px;
+  font-weight: bold;
+  padding-left: 0px;
+}
+
+.formularioInt  { /* Formulario estilos */
+  width: 800px;
+  height: 750;  
+  margin-top: 30px;
+  margin-bottom: 20px;
+ align-items: center;
+ justify-content: center;
+ padding-top: 20px;
+ padding-left: 10px;
+ /* background-color: aqua; */
+}
+
+.btnInput{ /* Campo de input para estilos y tamaños */
+  width: 320px;
+
+}
+
+.fontTtitle{ /*Textos para los campos  */
+  font-family: 'Montserrat', sans-serif;
+  color: #1f2553;
+}
+
+.imgShow {
+position: absolute;
+width: 40px;
+margin-left:650px;
+}
+
+.row1{ /* Contenedor Hijo */
+  width: 700px;
+  height: 130px;
+  margin-top: 10px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+}
+
+.row2{ /* Contenedor Hijo */
+width: 700px;
+height: 130px;
+margin-top: 20px;
+background-color: rgb(245, 245, 245);
+border-radius: 10px;
+}
+
+.btnSiguiente { /*Boton de Siguiente */
+
+ display: flex;
+ margin-left: 745px;
+ background-color: #1f2553;
+ color: #ffffff;
+ font-weight: bold;
+ font-family: 'Montserrat', sans-serif;
+ 
+}
+
+
+.btnGuardar{
+  position: absolute;
+  display: flex ;
+  margin-left: 682px;
+  margin-top: -45px;
+  background-color: #1f2553;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.btnLimpiar {
+  position: absolute;
+  display: flex ;
+  margin-left: 580px;
+  margin-top: -45px;
+  background-color: #1f2553;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btnCancelar {
+  position: absolute;
+  display: flex ;
+  margin-left: 470px;
+  margin-top: -45px;
+  background-color: #1f2553;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Eliminar los estilos en el estado :hover */
+.btnCancelar:hover, .btnGuardar:hover, .btnLimpiar:hover {
+  background-color: #e1e1e1;
+  color: #1f2553;
+}
+
+.icons {
+  display: flex;
+  justify-content:space-around;
+}
+
+
+.iconos-listar{
+  width: 15px;
+}
+
+.imgCancelar {
+  width: 20px;
+  margin-left: 5px;
+}
+
+.botonImgcancelar{
+  all: initial;
+}
+
+.contenedorImg{
+  width: 120px; /* Puedes ajustar el tamaño del rectángulo según tus necesidades */
+  height: 120px;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-top: -25px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+}
+
+.contenedorImg .imgProducto {
+  width: 120px;
+  height: auto;
+  display: block;
+
+}
+
+.posicionInfo{
+  position: absolute;
+  /* background-color:aqua; */
+  width: 500px;
+  height: 60px;
+  margin-top: 5px;
+  margin-left: 190px;
+}
+
+.parrafoDown {
+  white-space: nowrap;
+  height: 30px;
+  margin-top: -10px;
+}
+
+.container-fluid {
+  width: 150px;
+  height: 30px;
+  margin-top: -60px;
+  margin-left: 400px;
+}
+
+
+
+.tamaño {
+  width: 120px;
+  height: 40px;
+}
+
+
+.cantidad-input {
+  width: 300px;
+  background-color: #1f2553;
+}
+
+.btnRestar{ 
+  width: 300px;
+}
+
+.btnSumar {
+  width: 300px;
+}
+
+
+
+/*boton contador */
+.container2 {
+  max-width: 150px;
+  margin-top: -80px;
+  margin-left: 470px;
+  height: 60px;
+  /* background-color: aqua;  */
+}
+
+
+.custom-input{
+  width: 60px;
+  border: 1px solid #1f2553;
+  text-align: center;
+  color: #000000;
+  padding-left: 15px;
+}
+
+
+.custom-btn{
+  font-size: 15pt;
+  width: 40px;
+  border: 1px solid #1f2553;
+  color: #000000;
+  border-radius: 10px;
+  background-color: #fff;
+
+}
+
+.custom-btn:hover{
+  color: #ffffff;
+  font-weight: bold;
+  border: 1px solid #ffffff;
+  background-color: #1f2553;
+
+}
+
+.precios {
+  display: flex;
+  width: 290px;
+  height: 150px;
+  margin-top: 40px;
+  margin-left:50px;
+  border-radius: 10px;
+  border: 2px solid #e8e8e8;
+  background-color: #ffffff;
+  grid-template-columns: 1fr 1fr;
+}
+
+.containerprecio {
+  position: absolute;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px 10px 0 0;
+  width: 287px;
+  height: 70px;
+  font-family: 'Montserrat', sans-serif;
+  color: #1f2553;
+  font-weight: 700;
+  font-size: 18pt;
+  padding-top: 18px;
+  padding-left:8px;
+  border-radius: 10px 10px 10px 10px;
+  border:2px solid rgb(229, 229, 229);
+  margin-top: -2px;
+}
+
+
+.containerprecio2 {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 287px;
+  height: 70px;
+  margin-top: 67px;
+  font-size: 18pt;
+  font-family: 'Montserrat', sans-serif;
+  color: #1f2553;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-left:8px;
+  border-radius: 0 0 10px 10px;
+}
+
+
+
+ .containerpagos {
+  display: flex;
+  /* width: 490px; */
+  height: 50px;
+  margin-top: 160px;
+  /* margin-left: 10px; */
+  border-radius: 10px;
+  /* background-color: #fff; */
+  grid-template-columns: 1fr 1fr;
+}
+
+.botonPago {
+  width: 286px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #1f2553;
+  color: #1f2553;
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 15pt;
+  font-weight: 700;
+}
+.botonPago:hover {
+  width: 286px;
+  background-color: #1f2553;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+.containerSeguirCompras {
+  display: flex;
+  /* width: 290px; */
+  height: 50px;
+  margin-top: 225px;
+  margin-left: -285px;   
+  border-radius: 10px;
+  background-color: #fff;
+  grid-template-columns: 1fr 1fr;
+}
+
+.botonSeguirCompras {
+  width: 286px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #1f2553;
+  color: #1f2553;
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+.botonSeguirCompras:hover {
+  width: 286px;
+  background-color: #1f2553;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+.imgborrarProductos {
+  width: 15px;
+  margin-top: -85px;
+  margin-left: 90px;
+}
+
+.texto {
+margin-top: 10px;
+}
+

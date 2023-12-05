@@ -1,0 +1,94 @@
+<header class="border-bottom">
+  <div class="container1">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <!-- El tittle es para poner dinamico el nombre de donde nos encontramos -->
+        <li>
+          <nav class="navbar navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvaslightNavbar" aria-controls="offcanvaslightNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#"></a>
+              <div class="offcanvas offcanvas-start text-light" tabindex="-1" id="offcanvaslightNavbar"
+                aria-labelledby="offcanvaslightNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvaslightNavbarLabel">MENÚ</h5>
+                  <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <!-- Menu Items -->
+                    <li><a href="/dashboard">DASHBOARD</a></li>
+                    <li> <a href="#">CONFIGURACIÓN</a></li>
+                    <ul>
+                      <li><a href="/roles">Roles</a></li>
+                    </ul>
+                    <li><a href="/usuarios">GESTIÓN DE USUARIOS</a></li>
+                    <li><a href="#">COMPRAS</a></li>
+                    <ul>
+                      <li><a href="/categoriaInsumos">Categoria de insumos</a></li>
+                      <li><a href="/insumos">Gestion de insumos</a></li>
+                      <li><a href="/proveedores">Gestion de proveedores</a></li>
+                      <li><a href="/compras">Gestion de compras</a></li>
+                    </ul>
+                    <li><a href="#">PRODUCTOS</a></li>
+                    <ul>
+                      <li><a href="/disenoEstampados">Diseño estampado</a></li>
+                      <li><a href="/tamanoEstampados">Tamaño y Tipo estampado</a></li>
+                      <li><a href="/catalogoProductos">Catalogo de productos</a></li>
+                      <li><a href="/productoBase">Producto Base</a></li>
+                      <li><a href="/productoPersonalizado">Producto personalizado</a></li>
+                    </ul>
+                    <li><a href="#">PRODUCCION</a></li>
+                    <ul>
+                      <li><a href="/listarEmpleados">Gestion de empleados</a></li>
+                      <li><a href="/fichaTecnica">Gestion ficha Tecnica</a></li>
+                      <li><a href="/listarOrdenProduccion">Gestion Orden de producción</a></li>
+                    </ul>
+                    <li><a href="#">VENTAS</a></li>
+                    <ul>
+                      <li><a href="/listarClientes">gestión de clientes</a></li>
+                      <li><a href="/ventas">gestión de ventas</a></li>
+                      <li><a href="/cotizacion">gestión de cotizacion</a></li>
+                      <li><a href="/carritoProductos">gestión de carrito de productos</a></li>
+                      <li><a href="/pedidos">gestión de pedido</a></li>
+                    </ul>
+                    <!-- Agrega aquí más elementos del menú según sea necesario -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </li>
+        <li>
+          <h1 class="h2">{{title}}</h1>
+        </li>
+      </ul>
+
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search" />
+      </form>
+      <div class="dropdown text-end">
+        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle" />
+        </a>
+        <ul class="dropdown-menu text-small" style="">
+          <li><a class="dropdown-item" href="#">New project...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="/perfil">Profile</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><a class="dropdown-item" href="/">Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,30 @@
+.container1 {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .containerFooter {
+    width: 100%;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+  }
+
+  a{
+  color: #1f2553;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+  li{
+  color: #1f2553;
+  }
+
+  

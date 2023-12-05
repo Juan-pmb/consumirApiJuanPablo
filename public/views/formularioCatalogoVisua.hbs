@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styleCatalogo.css">
+    <link rel="stylesheet" href="../css/tablaColores.css">
+    <link rel="stylesheet" href="../css/estilosgeneral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-XmzZ95zdzyibFLldIoB7DFs9cWq44htcE8G2X+CGnlkzZ1KtN+1osB+1B+4jBwU" crossorigin="anonymous">
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
+
+    <title>Document</title>
+</head>
+<header class="border-bottom">
+    <div class="container1">
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"
+        >
+          <svg
+            class="bi me-2"
+            width="40"
+            height="32"
+            role="img"
+            aria-label="Bootstrap"
+          ><use xlink:href="#bootstrap" /></svg>
+        </a>
+  
+        <ul
+          class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+        >
+        <!-- El tittle es para poner dinamico el nombre de donde nos encontramos -->
+          <li><h1 class="h2">Productos</h1></li>
+        </ul>
+  
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Search..."
+            aria-label="Search"
+          />
+        </form>
+        <div class="dropdown text-end">
+          <a
+            href="#"
+            class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://github.com/mdo.png"
+              alt="mdo"
+              width="32"
+              height="32"
+              class="rounded-circle"
+            />
+          </a>
+          <ul class="dropdown-menu text-small" style =>
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<body>
+   <!--Navbar-->
+   <!--Cierre Navbar-->
+    <!--FORMULARIO-->
+
+    <div class="container">
+        <!-- Contenedor Padre -->
+        <h1 class="textoh1">Registrar producto (catálogo)</h1>
+        
+        
+        <form class="formularioInt">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-3 form-group">
+                        <label for="nombreProducto" class="form-label fontTtitle">Nombre del Producto: <span class= "text-danger">*</span></label>
+                        <input type="text" class="form-control btnInput" name="nombreProducto" id="nombreProducto" value="Buso rick y morty" readonly>
+                    </div>
+                    <div id="mensajeErrorProducto" class="mensajeErrorProducto"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-4 form-group">
+                        <label for="fechaCatalogo" class="form-label fontTtitle">Fecha <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control btnInput" name="fechaCatalogo" id="fecha" value="2023-03-14" readonly>
+                    </div>
+                    <div id="mensajeError" class="mensajeError"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-4 form-group">
+                        <label for="proveedor" class="form-label fontTtitle">Tipo de estampado: <span class="text-danger">*</span></label>
+                        <select class="form-select" aria-label="Default select example" readonly>
+                            <option selected>Sublimación</option>
+                            <option value="1">Sublimación</option>
+                            <option value="2">Bordado</option>
+                            <option value="3">Tampografía</option>
+                            <option value="4">Vinilo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-4 form-group">
+            <div class="col-md-4">
+                <div class="mb-3 form-group">
+                    <label for="stock" class="form-label fontTtitle">Stock: <span class= "text-danger">*</span></label>
+                    <input type="number" class="form-control btnInput" name="stock" id="stock" value="8" readonly>
+                </div>
+                <div id="mensajeError" class="mensajeError"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!-- Campo de búsqueda de ficha técnica -->
+    <div class="col-md-8">
+        <div class="mb-4 form-group">
+            <label for="fichaTecnica" class="form-label fontTtitle">Buscar Ficha Técnica</label>
+            <input type="text" class="form-control btnInput" name="fichaTecnica" id="fichaTecnica" placeholder="Ingrese el nombre o código de la ficha técnica" value="buso" readonly>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btnAgregarFichaTecnica" onclick="agregarFichaTecnica()">Agregar Ficha Técnica</button>
+    </div>
+</div>
+            <!-- Agregado un contenedor div para cada grupo de 3 columnas -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="col-md-4">
+                        <div class="mb-4 form-group">
+                            <label for="proveedor" class="form-label fontTtitle">Tamaño del estampado(cm) <span class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example" readonly>
+                                <option selected>5x15</option>
+                                <option value="1">15x30</option>
+                                <option value="2">30x60</option>
+                                <option value="3">50x50</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3 form-group">
+                        <label for="Precio" class="form-label fontTtitle">Precio <span class="text-danger">*</span></label>
+                        <input type="number" class="form-control btnInput" name="Precio" id="Precio" value="160.000" readonly>
+                    </div>
+                    <div id="mensajeError" class="mensajeError"></div>
+                </div>
+                <div class="mb-4 form-group">
+                    <label for="proveedor" class="form-label fontTtitle">Tipo de catálogo <span class= "text-danger">*</span></label>
+                    <select class="form-select" aria-label="Default select example" readonly>
+                        <option selected>Productos</option>
+                        <option value="1">Productos base</option>
+                        <option value="2">Diseños de estampados</option>
+                    </select>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-4 form-group">
+                        <label for="imagenInsumo" class="form-label fontTtitle">Subir imagen del producto: <span class= "text-danger">*</span></label>
+                        <img src="../img/hoodie.png" alt="imagen de muestra producto" class="form-control" style="height: 300px" readonly>
+                    </div>
+                </div>
+    
+
+                <!-- Tabla de colores -->
+                <div class="row4 gridAggPedido">
+                    <div class="insumos">
+                      <h1>Selección de colores</h1>
+        <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+        
+                      <select id="select-colores">
+                          <option value="">Seleccione un color</option>
+                          <option value="rojo">Rojo</option>
+                          <option value="negro">Negro</option>
+                          <option value="blanco">Blanco</option>
+                          <option value="verde">Verde</option>
+                          <option value="azul">Azul</option>
+                      </select>
+          
+                      <button id="btn-agregar" type="button">Agregar</button>
+          
+                      <h2>Colores seleccionados:</h2>
+                      <ul id="colores-seleccionados"></ul>
+                  </div>
+                  </div>
+
+                <div class="btnContainer">
+                    <button type="submit" class="btn btnCancelar">Regresar</button>
+                
+
+        </form>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="../js/validarCatalogo.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+
+</html>

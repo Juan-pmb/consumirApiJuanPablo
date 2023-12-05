@@ -1,0 +1,76 @@
+.body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1f2553;
+    color: rgb(0, 0, 0);
+    height: 430px;
+    border-radius: 12px;
+}
+
+
+
+.menu-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-container li {
+    margin-bottom: 10px;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.menu-container a:hover {
+    color: #4e60eb /* Cambia el color al pasar el ratón */
+}
+
+.product-container {
+    padding: 20px;
+}
+
+/* Estilos para las tarjetas de productos (puedes personalizarlos según tus necesidades) */
+.card {
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Otros estilos según tus preferencias */
+.btn-primary,
+.btn-secondary {
+    margin-top: 10px;
+}
+
+.btn-secondary {
+    /* Estilos específicos para el botón Personalizar */
+    background-color: #dadceb;
+    color: #1f2553;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 12px;
+    padding: 2px 16px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(234, 234, 234);
+    color: #1a2cb9;
+}
