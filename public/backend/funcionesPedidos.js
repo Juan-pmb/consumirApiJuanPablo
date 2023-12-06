@@ -211,11 +211,11 @@ const registrarPedido= () => {
     function verificarRegistro() {
         var urlParams = new URLSearchParams(window.location.search);
         var pedido = urlParams.get('pedido');
-        var idElement = document.getElementById('precioDolar');
+        var idElemento = document.getElementById('precioDolar');
     
             if (pedido) {
             // Estás en la página de edición
-            idElement.disabled = true;
+            idElemento.disabled = true;
             } 
       
     }
@@ -305,7 +305,7 @@ const editarPedido=() =>{
 function verificarEditar() {
     var urlParams = new URLSearchParams(window.location.search);
     var pedido = urlParams.get('pedido');
-    var idElement = document.getElementById('numPedido');
+    var idElement = document.getElementById('precioDolar');
 
         if (pedido) {
         // Estás en la página de edición
