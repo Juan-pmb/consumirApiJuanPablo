@@ -1,4 +1,5 @@
-const url = 'http://localhost:8282/pedidos';
+// const url = 'http://localhost:8282/pedidos';
+const url = 'https://apimodulosjuan.onrender.com/pedidos';
 
 const regresarListar = () => {
     window.location.href = '/pedidos';
@@ -58,7 +59,7 @@ const listarPedidos = async () => {
                 `</tr>`;
         });
 
-        objectId.innerHTML = contenido;
+        objectId.innerHTML = contenido;     
     });
 }
 
@@ -91,6 +92,8 @@ const registrarPedido= () => {
     const totalPago = document.getElementById('totalPago').value
     const formaPago = document.getElementById('formaPago').value
     const estado = document.getElementById('estado').value
+    const precioDolar = document.getElementById('precioDolar').value
+
  
 
     
@@ -112,6 +115,9 @@ const registrarPedido= () => {
     else if(estado.length == 0){
         document.getElementById('estadoHelp').value = 'Dato requerido'
     }
+    else if(precioDolar.length == 0){
+        document.getElementById('precioDolarHelp').value = 'Dato requerido'
+    }
     else{
         let pedido ={//variables de clave deben ser las mismas de la api
           //lo primero es la clave, lo segundo es lo que se va a enviar.
@@ -120,7 +126,8 @@ const registrarPedido= () => {
           direccionEnvio:direccionEnvio,
           totalPago: totalPago,
           formaPago:formaPago,
-          estado:estado
+          estado:estado,
+          precioDolar:precioDolar
            
         }
         //body= JSON.stringify(proveedor)
@@ -152,6 +159,7 @@ const actualizarPedido= () => {
     const totalPago = document.getElementById('totalPago').value
     const formaPago = document.getElementById('formaPago').value
     const estado = document.getElementById('estado').value
+    const precioDolar = document.getElementById('precioDolar').disabled
   
     if(numPedido.length == 0){
         document.getElementById('numPedidoelp').innerHTML = 'Dato requerido'
@@ -171,6 +179,9 @@ const actualizarPedido= () => {
     else if(estado.length == 0){
         document.getElementById('estadoHelp').innerHTML = 'Dato requerido'
     }
+    else if(precioDolar.length == 0){
+        document.getElementById('precioDolarHelp').innerHTML = 'Dato requerido'
+    }
     else{
         let pedido ={
             // _id:document.getElementById('idProveedor').value,
@@ -179,7 +190,8 @@ const actualizarPedido= () => {
             direccionEnvio:direccionEnvio,
             totalPago: totalPago,
             formaPago:formaPago,
-            estado:estado
+            estado:estado,
+            precioDolar:precioDolar
         }
         //Fecth permite reaizar peticiones http a una url
         fetch(url, {
@@ -215,6 +227,7 @@ const editarPedido=() =>{
     document.getElementById('totalPago').value =urlParams.get('totalPago')
     document.getElementById('formaPago').value =urlParams.get('formaPago')
     document.getElementById('estado').value =urlParams.get('estado')
+    document.getElementById('precioDolar').value =urlParams.get('precioDolar')
     // document.getElementById('btnRegistrar').style.display = 'block';
    
     verificarEditar();
@@ -255,6 +268,7 @@ const visualizarPedido=() =>{
     document.getElementById('totalPago').value =urlParams.get('totalPago')
     document.getElementById('formaPago').value =urlParams.get('formaPago')
     document.getElementById('estado').value =urlParams.get('estado')
+    document.getElementById('precioDolar').value =urlParams.get('precioDolar')
 
     verificarVisualizar();
     
@@ -301,15 +315,11 @@ async function eliminarPedido(numPedido) {
         const data = await response.json();
         console.log('Pedido eliminado:', data.msg);
 
-        // Puedes mostrar un mensaje de éxito al usuario si es necesario
         alert('Pedido eliminado exitosamente');
 
-        // Puedes realizar otras acciones aquí si es necesario
     } catch (error) {
         console.error('Error al eliminar pedido:', error.message);
-        // Puedes mostrar un mensaje de error al usuario si es necesario
         alert('Error al eliminar pedido');
-        // Puedes manejar errores aquí según tus necesidades
     }
 }
 
