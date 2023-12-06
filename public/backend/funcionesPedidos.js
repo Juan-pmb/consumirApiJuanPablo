@@ -159,7 +159,7 @@ const actualizarPedido= () => {
     const totalPago = document.getElementById('totalPago').value
     const formaPago = document.getElementById('formaPago').value
     const estado = document.getElementById('estado').value
-    const precioDolar = document.getElementById('precioDolar').disabled
+    const precioDolar = document.getElementById('precioDolar').value
   
     if(numPedido.length == 0){
         document.getElementById('numPedidoelp').innerHTML = 'Dato requerido'
@@ -223,11 +223,11 @@ const editarPedido=() =>{
     var urlParams = new URLSearchParams(window.location.search);
     document.getElementById('numPedido').value =urlParams.get('numPedido')
     document.getElementById('nombreCliente').value =urlParams.get('nombreCliente')
+    document.getElementById('precioDolar').value =urlParams.get('precioDolar')
     document.getElementById('direccionEnvio').value =urlParams.get('direccionEnvio')
     document.getElementById('totalPago').value =urlParams.get('totalPago')
     document.getElementById('formaPago').value =urlParams.get('formaPago')
     document.getElementById('estado').value =urlParams.get('estado')
-    document.getElementById('precioDolar').value =urlParams.get('precioDolar')
     // document.getElementById('btnRegistrar').style.display = 'block';
    
     verificarEditar();
