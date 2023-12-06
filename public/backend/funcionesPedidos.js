@@ -1,6 +1,67 @@
 // const url = 'http://localhost:8282/pedidos';
 const url = 'https://apimodulosjuan.onrender.com/pedidos';
 
+
+const obtenerDatoEspecifico = async () => {
+    const apiUrl = 'https://www.datos.gov.co/resource/mcec-87by.json';
+  
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+  
+      // Supongamos que quieres obtener el primer dato de la respuesta
+      const valor = data[0];
+  
+      // Ahora puedes usar datoEspecifico como necesites
+      console.log('Dato específico:', valor);
+  
+      // Si necesitas realizar alguna acción con este dato, puedes hacerlo aquí
+    } catch (error) {
+      console.error('Error al obtener dato específico de la API:', error);
+    }
+  };
+  
+  // Llama a la función para obtener el dato específico
+  obtenerDatoEspecifico();
+
+  // ...
+
+// Función para obtener y cargar los datos de la API en el campo precioDolar
+const cargarDatosDeAPI = async () => {
+    const apiUrl = 'https://www.datos.gov.co/resource/mcec-87by.json';
+
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        // Supongamos que precioDolar es el campo que quieres cargar
+        const precioDolarInput = document.getElementById('precioDolar');
+
+        // Aquí decides cómo quieres seleccionar el valor de la API, por ejemplo, usando el primer elemento
+        const primerElementoDeLaApi = data[0];
+        const valor = primerElementoDeLaApi && primerElementoDeLaApi.valor;
+
+        // Verificamos si el valor de la API es válido antes de asignarlo al campo
+        if (valor !== undefined) {
+            precioDolarInput.value = valor;
+        }
+
+    } catch (error) {
+        console.error('Error al cargar datos de la API:', error);
+    }
+};
+
+// Llamamos a la función para cargar los datos cuando la página se carga
+window.onload = () => {
+    cargarDatosDeAPI();
+    editarPedido(); // También llamamos a editarCompra, según tu implementación actual
+};
+
+
+
+
+
+
 const regresarListar = () => {
     window.location.href = '/pedidos';
 }
