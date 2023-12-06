@@ -206,19 +206,19 @@ const registrarPedido= () => {
     }
 
     //cambio 1. validarRegistro:
-    verificarRegistro();
+    // verificarRegistro();
     
-    function verificarRegistro() {
-        var urlParams = new URLSearchParams(window.location.search);
-        var pedido = urlParams.get('pedido');
-        var idElemento = document.getElementById('precioDolar');
+    // function verificarRegistro() {
+    //     var urlParams = new URLSearchParams(window.location.search);
+    //     var pedido = urlParams.get('pedido');
+    //     var idElemento = document.getElementById('precioDolar');
     
-            if (pedido) {
-            // Estás en la página de edición
-            idElemento.disabled = true;
-            } 
+    //         if (pedido) {
+    //         // Estás en la página de edición
+    //         idElemento.disabled = true;
+    //         } 
       
-    }
+    // }
 
 }
 
