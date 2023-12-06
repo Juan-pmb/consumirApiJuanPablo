@@ -58,10 +58,6 @@ window.onload = () => {
 };
 
 
-
-
-
-
 const regresarListar = () => {
     window.location.href = '/pedidos';
 }
@@ -145,7 +141,7 @@ const agregarPedido = async (datosPedido) => {
 listarPedidos();
 
 
-//REGISTRAR INSUMOS
+//REGISTRAR pedidos
 const registrarPedido= () => {
     const numPedido = document.getElementById('numPedido').value
     const nombreCliente = document.getElementById('nombreCliente').value
@@ -155,9 +151,7 @@ const registrarPedido= () => {
     const estado = document.getElementById('estado').value
     const precioDolar = document.getElementById('precioDolar').value
 
- 
 
-    
    if(numPedido.length == 0){
         document.getElementById('numPedidoHelp').value= 'Dato requerido'
     }
@@ -209,6 +203,21 @@ const registrarPedido= () => {
             },1000);
         })
        
+    }
+
+    //cambio 1. validarRegistro:
+    verificarRegistro();
+    
+    function verificarRegistro() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var pedido = urlParams.get('pedido');
+        var idElement = document.getElementById('precioDolar');
+    
+            if (pedido) {
+            // Estás en la página de edición
+            idElement.disabled = true;
+            } 
+      
     }
 
 }
@@ -298,18 +307,18 @@ function verificarEditar() {
     var pedido = urlParams.get('pedido');
     var idElement = document.getElementById('numPedido');
 
-        // if (pedido) {
-        // // Estás en la página de edición
-        // idElement.disabled = true;
-        // document.getElementById('btnGuardarEditar').style.display = 'block';
-        // document.getElementById('btnCancelarEditar').style.display = 'block';
-        // } 
-        // if (!pedido) {
-        // // No estás en la página de edición
-        //  document.getElementById('btnCancelarEditar').style.display = 'block';
-        //  document.getElementById('btnGuardarEditar').style.display = 'block';
+        if (pedido) {
+        // Estás en la página de edición
+        idElement.disabled = true;
+        document.getElementById('btnGuardarEditar').style.display = 'block';
+        document.getElementById('btnCancelarEditar').style.display = 'block';
+        } 
+        else if (pedido) {
+        // No estás en la página de edición
+         document.getElementById('btnCancelarEditar').style.display = 'block';
+         document.getElementById('btnGuardarEditar').style.display = 'block';
 
-        //  } 
+         } 
 }
 }
 
