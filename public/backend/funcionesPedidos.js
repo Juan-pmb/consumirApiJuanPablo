@@ -31,7 +31,7 @@ const listarPedidos = async () => {
                 `<td>${pedido.nombreCliente}</td>` +
                 `<td>${pedido.direccionEnvio}</td>` +
                 `<td>${pedido.totalPago}</td>` +
-                `<td>${pedido.formaPago}</td>` +
+                `<td>${pedido.precioDolar}</td>` +
                 `<td>${pedido.estado}</td>` +
 
                 `<td class="icons">` +
